@@ -1,0 +1,213 @@
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0e0d0d;
+    background: url(/static/images/back5.jpg);
+     /* height: 100vh;
+  background: 
+    linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)),
+    url(/static/images/backuhygiuygiug3.jpg) no-repeat center/cover; */
+    
+  }
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 100%;
+  }
+  /* Для адаптивности: менять число колонок при меньших экранах */
+  @media(max-width: 1200px){
+    .gallery {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  @media(max-width: 800px){
+    .gallery {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media(max-width: 500px){
+    .gallery {
+      grid-template-columns: 1fr;
+    }
+  }
+  .image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: box-shadow 0.3s, transform 0.3s, border 0.3s;
+    padding: 10px;
+    /* background-color: #e0960b7e; */
+  }
+  .image-container:hover {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transform: scale(1.02);
+  }
+  .image-container img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    transition: transform 0.3s;
+  }
+  .image-container span {
+    margin-top: 8px;
+    text-align: center;
+  }
+ 
+
+ nav ul li a:hover {
+    color: #ff0000; /* например, красный цвет при наведении */
+    background-color: rgba(0, 0, 0, 0.1); /* легкий фон при наведении, по желанию */
+    text-decoration: underline; /* например, подчеркнуть */
+  }
+
+   .my-video {
+  width: 680px; /* задайте нужную ширину */
+  height: auto; /* высота подгонится автоматически */
+  float: right; /* размещение справа */
+  margin-left: 20px; /* отступ слева для текста */
+  border-radius: 10px;
+}
+
+.textmain {
+  margin: 20px;
+}
+
+
+
+.footer {
+    text-align: left;
+    background: url(/static/images/backuhygiuygiug1.jpg); padding: 10px;
+     border: 2px solid gray; /* добавляем серую рамку толщиной 2px */
+     /* position: fixed; */
+    bottom: 0;  
+      width: 100%;
+      
+
+    
+  }
+
+   Общие стили
+  /* body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #fff;
+  } */
+  /* Шапка */
+  .header {
+    width: 100%;
+    background-color: #f5f5f5;
+   padding: 20px;
+    box-sizing: border-box;
+    
+  }
+  /* Центр: логотип и название */
+  .header-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+  }
+  .logo-img {
+    width: 60px;
+    height: 60px;
+    margin-right: 15px;
+  }
+  .site-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 700;
+  }
+  /* Нижняя строка с разделами и контактами */
+  .header-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    font-size: 20px;
+  }
+
+  /* Разделы */
+  .nav-section {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .nav-section a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+
+  .nav-section a:hover {
+    background-color: #e0e0e0;
+  }
+
+  /* Контакт и иконки */
+  .contacts {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .phone {
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  .telegram {
+    font-size: 24px;
+    color: #0088cc;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+
+  /* Адаптивность */
+  @media (max-width: 768px) {
+    .header-top {
+      flex-direction: column;
+    }
+    .header-bottom {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+        margin-bottom: 5px;
+    }
+    .nav-section {
+      justify-content: center;
+    }
+  }
+
+  .header {
+    background: url(/static/images/backuhygiuygiug1.jpg);
+    
+  } 
+
+  .nav-section a.active {
+  color: rgb(76, 84, 196); /* или любой другой стиль подсветки */
+  font-weight: bold;
+}
+
+
+/* Общие стили для увеличенного изображения */
+#modal-image {
+  max-width: 80%; /* по умолчанию */
+}
+
+/* Для мобильных устройств */
+@media (max-width: 768px) {
+  #modal-image {
+    max-width: 50%; /* занимает всю ширину */
+  }
+}
+
+
